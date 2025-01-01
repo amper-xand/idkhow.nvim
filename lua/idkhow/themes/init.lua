@@ -1,6 +1,6 @@
 local M = {}
 
-local groups = require("idkhow.groups.init")
+local groups = require("idkhow.groups")
 
 ---@class Theme
 ---@field name string
@@ -44,23 +44,26 @@ function M.apply(theme)
     vim.cmd [[hi clear]]
     vim.g.colors_name = theme.name
 
-    local editor = groups.editor(theme)
-
-    for group, conf in pairs(editor) do
-        vim.api.nvim_set_hl(0, group, conf)
+    ---@param group_df Group
+    local function set_groups(group_df)
+        for group, conf in pairs(group_df) do
+            vim.api.nvim_set_hl(0, group, conf)
+        end
     end
 
-    local syntax = groups.syntax(theme)
-
-    for group, conf in pairs(syntax) do
-        vim.api.nvim_set_hl(0, group, conf)
-    end
-
+    local editor     = groups.editor(theme)
+    local syntax     = groups.syntax(theme)
     local diagnostic = groups.diagnostic(theme)
+    local treesitter = groups.treesitter(theme)
+    local lsp        = groups.lsp(theme)
+    local signs      = groups.signs(theme)
 
-    for group, conf in pairs(diagnostic) do
-        vim.api.nvim_set_hl(0, group, conf)
-    end
+    set_groups(editor)
+    set_groups(syntax)
+    set_groups(diagnostic)
+    set_groups(treesitter)
+    set_groups(lsp)
+    set_groups(signs)
 end
 
 return M

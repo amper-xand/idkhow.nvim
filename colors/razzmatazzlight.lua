@@ -1,1 +1,1 @@
-require('idkhow').load("razzmatazzlight")
+require('idkhow').load("razzmatazz")

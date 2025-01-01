@@ -21,7 +21,7 @@ local razzmatazz = {
     -- misc colors
     graish        = "#7f7b62",
     green         = "#419950",
-    blue          = "#2f37FF",
+    blue          = "#2f47AA",
     black         = "#0c0c0f",
     -- additional colors related to the palette
     silver        = "#E5E3CF",
@@ -48,7 +48,7 @@ razzmatazz.darker = {
         -- status
         bad      = razzmatazz.ivory,
         good     = razzmatazz.green,
-        benign   = razzmatazz.blue,
+        benign   = razzmatazz.dark_slate,
         -- accents
         standout = razzmatazz.ivory,
         yell     = razzmatazz.red_cmyk,

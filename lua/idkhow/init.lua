@@ -5,7 +5,7 @@ M.name = "idkhow"
 --TODO: add setup settings
 
 function M.load(name)
-    local themes = require("idkhow.themes.init")
+    local themes = require("idkhow.themes")
 
     if name == "razzmatazz" then
         themes.apply(require("idkhow.themes.razzmatazz").razzmatazz.light)
@@ -18,6 +18,6 @@ function M.load(name)
     end
 end
 
-M.load("razzmatazz")
+M.load("razzmatazzdarker")
 
 return M

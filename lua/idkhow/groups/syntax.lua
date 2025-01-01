@@ -4,8 +4,8 @@ local M = {}
 ---@param theme Theme
 ---@return Group
 function M.syntax(theme)
-    local pal = theme.palette or {}
-    local con = theme.contrast or {}
+    local pal = theme.palette
+    local con = theme.contrast
 
     ---@type Group
     local syntax = {
@@ -96,8 +96,6 @@ function M.syntax(theme)
         { fg = pal.benign, bg = con.primary.main },
         Removed        = -- Removed line in a diff.
         { fg = pal.bad, bg = con.primary.main },
-
-        ["@variable"]  = { link = "Identifier" }, -- for treesitter
     }
 
     return syntax
