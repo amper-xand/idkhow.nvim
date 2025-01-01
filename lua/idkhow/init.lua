@@ -2,19 +2,22 @@ local M = {}
 
 M.name = "idkhow"
 
----@class IDKConfig
----@field theme string
+--TODO: add setup settings
 
 function M.load(name)
-    local themes = require("idkhow.themes")
+    local themes = require("idkhow.themes.init")
 
-    if name == "razzmatazzlight" then
-        themes.apply(themes.razzmatazz_light)
+    if name == "razzmatazz" then
+        themes.apply(require("idkhow.themes.razzmatazz").razzmatazz.light)
     elseif name == "razzmatazzdark" then
-        themes.apply(themes.razzmatazz_dark)
+        themes.apply(require("idkhow.themes.razzmatazz").razzmatazz.dark)
+    elseif name == "razzmatazzdarker" then
+        themes.apply(require("idkhow.themes.razzmatazz").razzmatazz.darker)
+
+        return
     end
 end
 
-M.load("razzmatazzdark")
+M.load("razzmatazz")
 
 return M
