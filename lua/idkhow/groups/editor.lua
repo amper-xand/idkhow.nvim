@@ -65,7 +65,7 @@ function M.editor(theme)
         { fg = pal.yell, bold = true },
 
         MatchParen   =      -- Character under the cursor or one of its pairs. |matchparen|
-        { fg = pal.yell, bg = con.contrast.shade, bold = true },
+        { fg = pal.yell, bold = true },
 
         ModeMsg      =      -- 'showmode' message (e.g., "-- INSERT --").
         { fg = pal.pop },
