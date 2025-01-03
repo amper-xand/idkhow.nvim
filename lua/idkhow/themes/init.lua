@@ -41,7 +41,6 @@ local groups = require("idkhow.groups")
 --- color palette
 ---@param theme Theme
 function M.apply(theme)
-    vim.cmd [[hi clear]]
     vim.g.colors_name = theme.name
 
     ---@param group_df Group
