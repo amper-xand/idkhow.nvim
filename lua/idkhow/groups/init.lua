@@ -47,6 +47,8 @@ end
 ---@param theme Theme
 ---@return Group
 function M.treesitter(theme)
+    ---NOTE: I think the theme already looks good
+
     local treesitter = {
         ["@variable"] = -- various variable names
         { link = "Identifier" },

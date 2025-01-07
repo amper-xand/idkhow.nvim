@@ -44,7 +44,7 @@ razzmatazz.darker = {
         danger   = razzmatazz.safety_orange,
         warning  = razzmatazz.gold,
         success  = razzmatazz.green,
-        neutral  = razzmatazz.apricot,
+        neutral  = razzmatazz.white,
         -- status
         bad      = razzmatazz.ivory,
         good     = razzmatazz.green,
@@ -110,7 +110,7 @@ razzmatazz.light = {
         danger   = razzmatazz.safety_orange,
         warning  = razzmatazz.gold,
         success  = razzmatazz.green,
-        neutral  = razzmatazz.apricot,
+        neutral  = razzmatazz.graish,
         -- status
         bad      = razzmatazz.ivory,
         good     = razzmatazz.green,
