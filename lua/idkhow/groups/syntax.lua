@@ -33,9 +33,9 @@ function M.syntax(theme)
         Statement      = -- Any statement.
         { fg = pal.intense },
         Conditional    = -- if, then, else, endif, switch, etc.
-        { fg = pal.warning },
+        { fg = pal.standout },
         Repeat         = -- for, do, while, etc.
-        { fg = pal.success },
+        { link = "Conditional" },
         Label          = -- case, default, etc.
         { fg = pal.pop },
         Operator       = -- "sizeof", "+", "*", etc.
@@ -50,11 +50,11 @@ function M.syntax(theme)
         Include        = -- Preprocessor #include.
         { fg = pal.shine },
         Define         = -- Preprocessor #define.
-        { fg = pal.warning },
+        { link = "Conditional" },
         Macro          = -- Same as Define.
         { link = "Define" },
         PreCondit      = -- Preprocessor #if, #else, #endif, etc.
-        { fg = pal.warning },
+        { link = "Conditional" },
 
         Type           = -- int, long, char, etc.
         { fg = pal.yell },
@@ -68,7 +68,7 @@ function M.syntax(theme)
         Special        = -- Any special symbol.
         { fg = pal.pop },
         SpecialChar    = -- Special character in a constant.
-        { fg = pal.warning },
+        { link = "Conditional" },
         Tag            = -- You can use CTRL-] on this.
         { fg = con.primary.main },
         Delimiter      = -- Character that needs attention.

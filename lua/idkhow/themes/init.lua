@@ -54,8 +54,12 @@ function M.get(name)
         return require("idkhow.themes.razzmatazz").razzmatazz.darker
     end
 
-    if name == "extendedplay"  then
+    if name == "extendedplay" then
         return require("idkhow.themes.extendedplay").extendedplay.dark
+    end
+
+    if name == "gloomdivision" then
+        return require("idkhow.themes.gloomdivision").gloomdivision.light
     end
 
     -- if name == "extendedplaylight"  then
@@ -70,7 +74,6 @@ end
 function M.load(name)
     M.apply(M.get(name))
 end
-
 
 --- color palette
 ---@param theme Theme

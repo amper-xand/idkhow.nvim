@@ -37,7 +37,7 @@ extendedplay.dark = {
         benign   = extendedplay.violet_blue,
         -- accents
         standout = extendedplay.cinnabar,
-        yell     = extendedplay.midnight_blue,
+        yell     = extendedplay.violet_blue,
         pop      = extendedplay.imperial_red,
         shine    = extendedplay.spanish_orange,
         shy      = extendedplay.graish,
