@@ -37,6 +37,32 @@ local groups = require("idkhow.groups")
 ---@field contrast   string|{main: string, shade: string, alt: string}
 ---@field text       string|{normal: string, hide: string, relevant: string}
 
+---get a theme by its name
+---@param name string
+---@return Theme
+function M.get(name)
+    if name == "razzmatazz" then
+        return require("idkhow.themes.razzmatazz").razzmatazz.light
+    end
+
+    if name == "razzmatazzdark" then
+        return require("idkhow.themes.razzmatazz").razzmatazz.dark
+    end
+
+    if name == "razzmatazzdarker" then
+        return require("idkhow.themes.razzmatazz").razzmatazz.darker
+    end
+
+    return require("idkhow.themes.razzmatazz").razzmatazz.light
+end
+
+---load a theme by its name
+---@param name string
+function M.load(name)
+    local themes = require("idkhow.themes")
+    themes.apply(themes.get(name))
+end
+
 
 --- color palette
 ---@param theme Theme

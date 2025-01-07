@@ -1,1 +1,1 @@
-require('idkhow').load("razzmatazz")
+require('idkhow.themes').load("razzmatazz")
