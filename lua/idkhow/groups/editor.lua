@@ -7,6 +7,8 @@ function M.editor(theme)
     local pal = theme.palette
     local con = theme.contrast
 
+    local config = require("idkhow").config
+
     ---@type Group
     local editor = {
         CurSearch    =      -- Used for highlighting a search pattern under the cursor.
@@ -86,7 +88,7 @@ function M.editor(theme)
         { link = "Normal" },
 
         NormalNC     =      -- Normal text in non-current windows.
-        { fg = con.text.hide, bg = con.primary.main },
+        config.NChide and { fg = con.text.hide, bg = con.primary.main } or { link = "Normal"},
 
         FloatBorder  =      -- Border of floating windows.
         { fg = pal.yell },
