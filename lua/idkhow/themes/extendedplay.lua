@@ -2,8 +2,8 @@ local M = {}
 
 local extendedplay = {
     -- picked from cover
-    spanish_orange = "#E47035",
-    cinnabar       = "#E7573C",
+    spanish_orange = "#E49535",
+    cinnabar       = "#FF573C",
     imperial_red   = "#E63036",
     violet_blue    = "#3351AF",
     midnight_blue  = "#322D74",
