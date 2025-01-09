@@ -3,11 +3,11 @@ local M = {}
 local gloomdivision = {
 
     liver          = "#6A4941",
-    columbia_blue  = "#A6C2D0",
-    air_force_blue = "#6787A7",
+    columbia_blue  = "#EFEDFA",
+    air_force_blue = "#A7A7DF",
     flame          = "#D95020",
-    orange_crayola = "#EE6628",
-    ut_orange      = "#F6903C",
+    orange_crayola = "#EE7A28",
+    ut_orange      = "#F6A03C",
     xanthous       = "#F7B436",
     licorice       = "#190F0F",
     misty_rose     = "#F0DFDE",
