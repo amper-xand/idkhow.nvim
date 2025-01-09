@@ -16,9 +16,6 @@ return {
 
     init = function()
         vim.o.termguicolors = true
-        require("idkhow").setup({
-            NChide = true, -- optional, makes text lighter in non current windows
-        })
         vim.cmd [[colorscheme razzmatazz]]
     end,
 }
