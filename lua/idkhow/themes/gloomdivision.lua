@@ -3,16 +3,16 @@ local M = {}
 local gloomdivision = {
 
     liver          = "#6A4941",
-    columbia_blue  = "#EFEDFA",
+    columbia_blue  = "#ECE1FF",
     air_force_blue = "#A7A7DF",
     flame          = "#D95020",
-    orange_crayola = "#EE7A28",
+    orange_crayola = "#FE7A28",
     ut_orange      = "#F6A03C",
     xanthous       = "#F7B436",
     licorice       = "#190F0F",
     misty_rose     = "#F0DFDE",
     lion           = "#AA9773",
-    rosy_brown     = "#CE9C99",
+    rosy_brown     = "#CE9C79",
     -- misc colors
     gold           = "#FEB030",
     green          = "#419950",
@@ -41,14 +41,32 @@ gloomdivision.light = {
         pop      = gloomdivision.liver,
         shine    = gloomdivision.ut_orange,
         shy      = gloomdivision.rosy_brown,
-
-        deeper   = gloomdivision.flame,
-        subtle   = gloomdivision.orange_crayola,
-        softer   = gloomdivision.ut_orange,
-        vibrant  = gloomdivision.imperial_red,
+        hide     = gloomdivision.graish,
         intense  = gloomdivision.flame,
-        muted    = gloomdivision.liver,
     },
+
+    editor = {
+        background = gloomdivision.columbia_blue,
+        activebg   = gloomdivision.air_force_blue,
+        cursor     = gloomdivision.licorice,
+        text       = gloomdivision.licorice,
+        visual     = gloomdivision.ut_orange,
+        menu       = gloomdivision.ut_orange,
+        selection  = gloomdivision.flame,
+        status     = gloomdivision.orange_crayola,
+        statusnc   = gloomdivision.flame,
+    },
+
+    syntax = {
+        keyword  = gloomdivision.lion,
+        modifier = gloomdivision.ut_orange,
+        type     = gloomdivision.orange_crayola,
+        typedef  = gloomdivision.flame,
+        constant = gloomdivision.flame,
+        literal  = gloomdivision.rosy_brown,
+        strings  = gloomdivision.rosy_brown,
+    },
+
     contrast = {
         primary = {
             main  = gloomdivision.columbia_blue,
@@ -59,11 +77,6 @@ gloomdivision.light = {
             main  = gloomdivision.orange_crayola,
             shade = gloomdivision.flame,
             alt   = gloomdivision.liver,
-        },
-        text = {
-            normal = gloomdivision.licorice,
-            hide = gloomdivision.graish,
-            relevant = gloomdivision.licorice,
         },
     }
 }

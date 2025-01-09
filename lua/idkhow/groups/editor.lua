@@ -63,7 +63,8 @@ function M.editor(theme)
         WinSeparator = -- Separators between window splits.
         { fg = pal.pop },
 
-        -- Folded		Line used for closed folds.
+        Folded =	   -- Line used for closed folds.
+        { bg = spec.activebg },
         -- FoldColumn	'foldcolumn'
         -- SignColumn	Column where |signs| are displayed.
 
