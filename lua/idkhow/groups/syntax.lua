@@ -1,54 +1,65 @@
 local M = {}
 
+---@class SyntaxSpec
+---@field keyword  string
+---@field modifier string --- like access or class modifiers
+---@field type     string
+---@field typedef  string --- keywords that define types, structs, classes...
+---@field literal  string --- numbers, booleans...
+---@field strings  string
+---@field constant string
+
 ---fills the colors defined in :h group-name
 ---@param theme Theme
 ---@return Group
 function M.syntax(theme)
     local pal = theme.palette
     local con = theme.contrast
+    local ed = theme.editor
+    local syn = theme.syntax
 
     ---@type Group
     local syntax = {
         Comment        = -- Any comment.
-        { fg = con.text.hide, italic = true },
+        { fg = pal.hide, italic = true },
 
         Constant       = -- Any constant.
-        { fg = pal.deeper, bold = true },
+        { fg = syn.constant, bold = true },
         String         = -- A string constant: "this is a string".
-        { fg = pal.subtle, italic = true },
+        { fg = syn.strings, italic = true },
         Character      = -- A character constant: 'c', '\n'.
         { link = "String" },
         Number         = -- A number constant: 234, 0xff.
-        { fg = pal.softer },
+        { fg = syn.literal },
         Boolean        = -- A boolean constant: TRUE, false.
         { link = "Number" },
         Float          = -- A floating point constant: 2.3e10.
         { link = "Number" },
 
         Identifier     = -- Any variable name.
-        { fg = con.text.relevant },
+        { fg = ed.text },
         Function       = -- Function name (also: methods for classes).
         { fg = pal.intense, bold = true, underdotted = true },
 
         Statement      = -- Any statement.
-        { fg = pal.intense },
+        { link = "Keyword" },
         Conditional    = -- if, then, else, endif, switch, etc.
-        { fg = pal.standout },
+        { link = "Keyword" },
         Repeat         = -- for, do, while, etc.
         { link = "Conditional" },
         Label          = -- case, default, etc.
-        { fg = pal.pop },
+        { link = "Conditional" },
         Operator       = -- "sizeof", "+", "*", etc.
-        { fg = con.contrast.main },
+        { link = "Keyword" },
         Keyword        = -- Any other keyword.
-        { fg = pal.pop, bold = true },
+        { fg = syn.keyword, bold = true },
         Exception      = -- try, catch, throw.
         { fg = pal.danger, italic = true },
 
         PreProc        = -- Generic preprocessor.
-        { fg = con.primary.main },
+        { link = "Define" },
         Include        = -- Preprocessor #include.
-        { fg = pal.shine },
+        { link = "Define" },
         Define         = -- Preprocessor #define.
         { link = "Conditional" },
         Macro          = -- Same as Define.
@@ -57,13 +68,13 @@ function M.syntax(theme)
         { link = "Conditional" },
 
         Type           = -- int, long, char, etc.
-        { fg = pal.yell },
+        { fg = syn.type },
         StorageClass   = -- static, register, volatile, etc.
-        { fg = pal.pop },
+        { fg = syn.modifier },
         Structure      = -- struct, union, enum, etc.
-        { fg = pal.shine },
+        { fg = syn.typedef },
         Typedef        = -- A typedef.
-        { fg = pal.shine },
+        { link = "Structure" },
 
         Special        = -- Any special symbol.
         { fg = pal.pop },

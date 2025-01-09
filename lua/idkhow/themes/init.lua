@@ -3,9 +3,11 @@ local M = {}
 local groups = require("idkhow.groups")
 
 ---@class Theme
----@field name string
----@field palette ThemePalette  A palette that shows the intention of each color.
----@field contrast ContrastSpec A palette revolving around contrast, helps to make dark and light versions.
+---@field name     string
+---@field palette  ThemePalette  A palette that shows the intention of each color.
+---@field contrast ContrastSpec A palette that helps selecting contrasting colors
+---@field editor   EditorSpec
+---@field syntax   SyntaxSpec
 
 ---@class ThemePalette
 -- informational
@@ -20,22 +22,16 @@ local groups = require("idkhow.groups")
 ---@field good       string
 ---@field benign     string
 -- accents
----@field standout   string
 ---@field yell       string
 ---@field pop        string
 ---@field shine      string
 ---@field shy        string
----@field deeper     string
----@field subtle     string
----@field softer     string
----@field vibrant    string
+---@field hide       string
 ---@field intense    string
----@field muted      string
 
 ---@class ContrastSpec
 ---@field primary string|{main: string, shade: string, alt: string}
 ---@field contrast   string|{main: string, shade: string, alt: string}
----@field text       string|{normal: string, hide: string, relevant: string}
 
 
 ---get a theme by its name
@@ -44,10 +40,6 @@ local groups = require("idkhow.groups")
 function M.get(name)
     if name == "razzmatazz" then
         return require("idkhow.themes.razzmatazz").razzmatazz.light
-    end
-
-    if name == "razzmatazzdark" then
-        return require("idkhow.themes.razzmatazz").razzmatazz.dark
     end
 
     if name == "razzmatazzdarker" then
