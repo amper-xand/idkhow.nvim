@@ -3,7 +3,7 @@ Color schemes inspired by albums from **I DONT KNOW HOW BUT THEY FOUND ME**.
 
 ### Included Themes:
 - **Razzmatazz**: A colorful light theme with an additional dark variant.
-- **1984 Extended Play**: A high-contrast dark theme with a minimalist palette.
+<!--- **1984 Extended Play**: A high-contrast dark theme with a minimalist palette.-->
 - **Gloom Division**: A soft, pastel light theme.
 
 ## Installation and Usage
@@ -24,8 +24,8 @@ return {
 ## Razzmatazz
 ![Razzmatazz](assets/razzmatazz.png?)
 
-## 1984 extended play
-![1984 extended play](assets/extendedplay.png?)
+<!--## 1984 extended play-->
+<!--![1984 extended play](assets/extendedplay.png?)-->
 
 ## Gloom division
 ![Gloomdivision](assets/gloomdivision.png?)
