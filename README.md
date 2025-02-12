@@ -22,16 +22,10 @@ return {
 ```
 
 ## Razzmatazz
-<p align="center">
-  <img src="assets/razzmatazz.png?" alt="Razzmatazz" width="90%">
-</p>
+![Razzmatazz](assets/razzmatazz.png?)
 
 ## 1984 extended play
-<p align="center">
-  <img src="assets/extendedplay.png?" alt="1984 extended play" width="90%">
-</p>
+![1984 extended play](assets/extendedplay.png?)
 
 ## Gloom division
-<p align="center">
-  <img src="assets/gloomdivision.png?" alt="Gloomdivision" width="90%">
-</p>
+![Gloomdivision](assets/gloomdivision.png?)
