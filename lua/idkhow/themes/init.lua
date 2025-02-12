@@ -85,6 +85,7 @@ function M.apply(theme)
     local treesitter = groups.treesitter(theme)
     local lsp        = groups.lsp(theme)
     local signs      = groups.signs(theme)
+    local dapui      = groups.dapui(theme)
 
     set_groups(editor)
     set_groups(syntax)
@@ -92,6 +93,7 @@ function M.apply(theme)
     set_groups(treesitter)
     set_groups(lsp)
     set_groups(signs)
+    set_groups(dapui)
 end
 
 return M

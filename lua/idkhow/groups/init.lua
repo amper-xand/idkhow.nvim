@@ -67,4 +67,36 @@ function M.signs(theme)
     }
 end
 
+---@param theme Theme
+---@return Group
+function M.dapui(theme)
+    return {
+        DapUIScope                   = { fg = theme.palette.pop, },
+        DapUIType                    = { fg = theme.palette.intense, },
+        DapUIModifiedValue           = { fg = theme.palette.pop, bold = true },
+        DapUIDecoration              = { fg = theme.palette.pop, },
+        DapUIThread                  = { fg = theme.palette.shine, },
+        DapUIStoppedThread           = { fg = theme.palette.pop, },
+        DapUISource                  = { fg = theme.palette.intense, },
+        DapUILineNumber              = { fg = theme.palette.pop, },
+        DapUIFloatBorder             = { fg = theme.palette.pop, },
+        DapUIWatchesEmpty            = { fg = theme.palette.yell, },
+        DapUIWatchesValue            = { fg = theme.palette.shine, },
+        DapUIWatchesError            = { fg = theme.palette.yell, },
+        DapUIBreakpointsPath         = { fg = theme.palette.pop, },
+        DapUIBreakpointsInfo         = { fg = theme.palette.shine, },
+        DapUIBreakpointsCurrentLine  = { fg = theme.palette.shine, bold = true },
+        DapUIBreakpointsDisabledLine = { fg = theme.palette.neutral, },
+        DapUIStepOver                = { fg = theme.palette.pop, bg = "black" },
+        DapUIStepInto                = { fg = theme.palette.pop, bg = "black" },
+        DapUIStepBack                = { fg = theme.palette.pop, bg = "black" },
+        DapUIStepOut                 = { fg = theme.palette.pop, bg = "black" },
+        DapUIStop                    = { fg = theme.palette.yell, bg = "black" },
+        DapUIPlayPause               = { fg = theme.palette.shine, bg = "black" },
+        DapUIRestart                 = { fg = theme.palette.shine, bg = "black" },
+        DapUIUnavailable             = { fg = theme.palette.neutral, bg = "black", },
+        DapUIWinSelect               = { fg = theme.palette.pop, bold = true },
+    }
+end
+
 return M
